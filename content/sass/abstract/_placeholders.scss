@@ -1,0 +1,25 @@
+// FOR ::AFTER OR ::BEFORE CSS ELEMENTS
+%pseudo-ele {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+// SET THE SADOW OF ELEMENT WITH CUSTOM PROPERTIES
+%shadow {
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.2);
+}
+
+// FOR ELEMENT THAT HAS BACKGROUND-IMAGE STYLE
+%cover-background {
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+}
+%text {
+  color: $textColor;
+  line-height: 2;
+  text-wrap: balance;
+}

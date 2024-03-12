@@ -1,0 +1,54 @@
+// IMPORT FONT FILES
+@font-face {
+  font-family: "Alexandria";
+  src: url("../fonts/alexandria/Alexandria-Light.eot");
+  src: url("../fonts/alexandria/Alexandria-Light.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/alexandria/Alexandria-Light.woff2") format("woff2"),
+    url("../fonts/alexandria/Alexandria-Light.woff") format("woff"),
+    url("../fonts/alexandria/Alexandria-Light.ttf") format("truetype"),
+    url("../fonts/alexandria/Alexandria-Light.svg#Alexandria-Light")
+      format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AlGhadTV";
+  src: url("../fonts/al-ghad/AlGhadTV-Bold.eot");
+  src: url("../fonts/al-ghad/AlGhadTV-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/al-ghad/AlGhadTV-Bold.woff2") format("woff2"),
+    url("../fonts/al-ghad/AlGhadTV-Bold.woff") format("woff"),
+    url("../fonts/al-ghad/AlGhadTV-Bold.ttf") format("truetype"),
+    url("../fonts/al-ghad/AlGhadTV-Bold.svg#AlGhadTV-Bold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ==========DEFINE MAIN VARIABLES
+
+// TRANSITIONS WITH DIFFRENT TIMES
+$transition: all 0.5s ease-in-out;
+$transition3: all 0.3s ease-in-out;
+$transition7: all 0.7s ease-in-out;
+
+/* FONT FAMILY */
+$AlexFont: "Alexandria";
+$AlghadFont: "AlGhadTV";
+
+/* MAIN FONT SIZE */
+$fontSize: 16px;
+
+/* COLORS VARIABLES */
+$mainColor: #511b4b; // main site color
+$lightMainColor: #e0c7dd; // main site light color
+$redColor: #e94444;
+$textColor: rgba(1, 0, 0, 0.5); // main text color
+$pageColor: #f7f5f6; // site page background color
+$whiteText: #fff; // site white text color
+$lightGrayColor: #f5f5f5;
+$borderColor: rgba(102, 102, 102, 0.5); // site border color
+$scrollTrackColor: #eeedf3; // site scrollbar track color

@@ -1,0 +1,62 @@
+.file-uploader {
+  @include displayFlex($wrap: wrap, $gap: 24px);
+
+  %cardStyle {
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    @include displayFlex($justify: center);
+    flex-shrink: 0;
+    border: 1px solid rgba(102, 102, 102, 0.5);
+    aspect-ratio: 1/0.9;
+    border-radius: 10px;
+  }
+
+  .uploader-handler {
+    @extend %cardStyle;
+
+    input[type="file"] {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+      opacity: 0;
+
+      &::-webkit-file-upload-button {
+        display: none;
+      }
+    }
+
+    .image-wrap {
+      width: 25px;
+      max-width: 80%;
+      aspect-ratio: 1;
+    }
+  }
+
+  .thumbnail {
+    @extend %cardStyle;
+
+    .remove {
+      position: absolute;
+      top: 5px;
+      inset-inline-end: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      width: 20px;
+      aspect-ratio: 1;
+      color: $whiteText;
+      background-color: $redColor;
+      border: none;
+      padding: 0;
+      border-radius: 50%;
+      opacity: 0;
+      transition: $transition3;
+    }
+
+    &:hover {
+      .remove {
+        opacity: 1;
+      }
+    }
+  }
+}

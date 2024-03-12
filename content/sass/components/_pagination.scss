@@ -1,0 +1,40 @@
+.pagination-wrap {
+  @include displayFlex($justify: center);
+
+  .pagination {
+    @include displayFlex($justify: center, $gap: 10px);
+    .page-item {
+      .page-link {
+        padding: 0;
+        color: #000;
+        background-color: transparent;
+        border: none;
+        font-size: 14px;
+
+        &.active {
+          color: $mainColor;
+        }
+      }
+
+      &:first-of-type,
+      &:last-of-type {
+        .page-link {
+          width: 35px;
+          aspect-ratio: 1;
+          color: $whiteText;
+          background-color: $mainColor;
+          @include displayFlex($justify: center);
+          border-radius: 8px;
+        }
+
+        &.disabled {
+          .page-link {
+            color: #000;
+            background-color: transparent;
+            border: 1px solid $lightMainColor;
+          }
+        }
+      }
+    }
+  }
+}

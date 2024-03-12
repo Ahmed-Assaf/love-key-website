@@ -1,0 +1,67 @@
+// MAIN BUTTON OF WEBSITE
+.main-link {
+  width: fit-content;
+  color: $mainColor;
+  @include displayFlex($gap: 10px);
+  transition: $transition3;
+
+  i {
+    width: 20px;
+    aspect-ratio: 1;
+    @include displayFlex($justify: center);
+    color: $pageColor;
+    background-color: $mainColor;
+    border-radius: 50%;
+    font-size: 8px;
+  }
+
+  &:hover {
+    color: $mainColor;
+    gap: 15px;
+  }
+}
+
+.btn-primary {
+  color: $whiteText;
+  background-color: $mainColor;
+  border: none;
+  box-shadow: none;
+  padding: 14px 30px;
+  text-align: center;
+  @include displayFlex($justify: center, $gap: 10px);
+  width: fit-content;
+  min-width: 260px;
+  max-width: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($mainColor, 0.95) !important;
+  }
+}
+
+.btn-secondary {
+  color: $whiteText;
+  background-color: rgba($mainColor, 0.5);
+  border: none;
+  box-shadow: none;
+  padding: 14px 30px;
+  text-align: center;
+  @include displayFlex($justify: center, $gap: 10px);
+  width: fit-content;
+  min-width: 260px;
+  max-width: inherit;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($mainColor, 0.45) !important;
+  }
+}
+
+.btn {
+  &.sm {
+    padding: 8px 20px;
+    min-width: unset;
+  }
+}

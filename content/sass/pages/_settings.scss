@@ -1,0 +1,21 @@
+.settings-page {
+  label,
+  .links .link {
+    color: $mainColor;
+  }
+
+  .links {
+    .link {
+      display: block;
+      background-color: $lightGrayColor;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 0;
+      transition: $transition3;
+
+      &:hover {
+        background-color: $lightMainColor;
+      }
+    }
+  }
+}

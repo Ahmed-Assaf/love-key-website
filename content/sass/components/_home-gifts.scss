@@ -1,0 +1,27 @@
+.home-gifts {
+  position: relative;
+
+  .row {
+    row-gap: 30px;
+  }
+
+  .slogan-s {
+    .text {
+      -webkit-line-clamp: 5;
+    }
+  }
+
+  .slogan-e {
+    .image-wrap {
+      width: 80%;
+    }
+  }
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    inset-inline-start: 0;
+    inset-block-end: 0;
+    width: 90px;
+  }
+}

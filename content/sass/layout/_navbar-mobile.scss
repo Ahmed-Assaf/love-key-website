@@ -1,0 +1,160 @@
+.navbar-mobile {
+  position: fixed;
+  inset-inline-start: -100%;
+  color: $textColor;
+  opacity: 0;
+  border: {
+    start-end-radius: 20px;
+    end-end-radius: 20px;
+  }
+
+  visibility: hidden;
+  overflow: hidden;
+  width: 90%;
+  height: 100%;
+  transition: $transition;
+  z-index: 20;
+  @include displayFlex($direction: column, $align: unset, $gap: 0);
+  box-shadow: -1px 2px 22px rgb(0 0 0 / 13%);
+
+  &::before {
+    @extend %pseudo-ele;
+    position: absolute;
+    inset: 0;
+    background: rgba($pageColor, 0.9);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.6px);
+    -webkit-backdrop-filter: blur(7.6px);
+    border: 1px solid rgba($pageColor, 0.9);
+    z-index: 0;
+  }
+
+  .nav-flex {
+    @include displayFlex($justify: space-between);
+    position: relative;
+    padding: 15px 20px;
+    z-index: 3;
+    border-bottom: 1px solid $pageColor;
+
+    .navbar-brand {
+      width: 120px;
+    }
+
+    .close-btn {
+      font-size: 1.3rem;
+    }
+  }
+
+  .mobile-links {
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    overflow-y: auto;
+
+    li {
+      position: relative;
+      padding: 10px 0;
+
+      a {
+        position: relative;
+        @include displayFlex($gap: 10px);
+        padding: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: $transition3;
+
+        &.active {
+        }
+      }
+
+      &.menu-item-has-children {
+        position: relative;
+
+        > a {
+          &:after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            content: "\f104";
+            // margin: 0 5px;
+            inset-inline-end: 10px;
+            top: 50%;
+            position: absolute;
+            transform: rotate(0deg) translate(0, -50%);
+            transition: $transition;
+            color: #fff;
+          }
+
+          &.arrow {
+            padding: 10px;
+
+            &::after {
+              transform: rotate(-90deg) translate(0, -50%);
+              transition: $transition;
+              transform-origin: center top;
+            }
+          }
+        }
+      }
+
+      .sub-menu {
+        background: #21243d14;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 85%;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        transition: $transition;
+        margin-inline-start: 10px;
+
+        > li {
+          padding: 10px 10px 10px 0;
+          position: relative;
+
+          a {
+            color: #fff;
+            position: relative;
+            display: flex;
+          }
+        }
+
+        &.show {
+          opacity: 1;
+          max-height: 1000px;
+          visibility: visible;
+          padding: 10px 0;
+          transition: $transition;
+          // margin-top: 10px;
+        }
+      }
+
+      &.clicked {
+        > a {
+          background-color: $mainColor;
+          color: #fff !important;
+          transition: $transition;
+        }
+      }
+    }
+
+    li {
+      position: relative;
+    }
+  }
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    inset-inline-start: 0;
+
+    // &::before {
+    //   opacity: 1;
+    //   visibility: visible;
+    //   transition: $transition7;
+    // }
+  }
+}

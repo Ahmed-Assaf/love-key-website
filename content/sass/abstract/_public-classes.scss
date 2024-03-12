@@ -1,0 +1,41 @@
+//  SET ABSOLUTE ELEMENT IN CENTER X AND Y
+.absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+// GAP BETWEEN ITEMS VERTICALLY IN ROW CLASS
+.row-gap-10 {
+  row-gap: 10px;
+}
+
+.row-gap-20 {
+  row-gap: 20px;
+}
+
+.row-gap-30 {
+  row-gap: 30px;
+}
+
+.row-gap-40 {
+  row-gap: 40px;
+}
+
+.row-gap-50 {
+  row-gap: 50px;
+}
+
+// ghad font
+.ghad-font {
+  font-family: $AlghadFont;
+}
+
+.above-all {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  @include displayFlex($direction: column, $align: unset, $gap: 0);
+}

@@ -1,0 +1,91 @@
+.auth-page {
+  background-image: url("../imgs/auth-bg.svg");
+  @extend %cover-background;
+  background-position: top center;
+  height: 100vh;
+  overflow: hidden;
+
+  .phone-wrap {
+    position: relative;
+
+    .phone-frame {
+      overflow: hidden;
+      position: relative;
+      height: 100%;
+      border: 1.5vw solid #212121;
+      border-radius: 4vw;
+
+      &::before {
+        @extend %pseudo-ele;
+        inset-block-start: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 40%;
+        height: 15px;
+        border-radius: 0 0 20px 20px;
+        background-color: #212121;
+        z-index: 1;
+      }
+    }
+
+    .frame-img {
+      position: absolute;
+      width: 20%;
+      bottom: 0;
+
+      &.start-img {
+        inset-inline-start: -10px;
+        inset-block-end: 30px;
+        transform: translate(50%, 50%);
+      }
+
+      &.end-img {
+        inset-inline-start: 100%;
+        inset-block-end: 0;
+        // transform: translate(-50%, 50%);
+      }
+    }
+  }
+
+  .form-wrap {
+    border-radius: 0;
+    border: none;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 0;
+
+    .logo {
+      width: 90px;
+      margin: 0 auto 30px;
+    }
+
+    .btn.btn-primary {
+      max-width: 90%;
+      min-width: 60%;
+    }
+  }
+
+  &.auth-card {
+    .form-wrap {
+      border-radius: 4vw;
+      background-color: $lightGrayColor;
+      overflow: visible;
+
+      .frame-img {
+        width: 22%;
+        position: absolute;
+        inset-block-end: -6%;
+
+        &.start-img {
+          inset-inline-start: -20px;
+        }
+
+        &.end-img {
+          inset-inline-end: -20px;
+        }
+      }
+    }
+  }
+}

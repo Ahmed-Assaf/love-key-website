@@ -1,0 +1,37 @@
+.header {
+  .header-slider {
+    .item {
+      aspect-ratio: 4/1;
+    }
+
+    .owl-dots {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      inset-inline-start: 0;
+      @include displayFlex($justify: center, $gap: 5px);
+
+      .owl-dot {
+        span {
+          &,
+          &:hover {
+            display: block;
+            width: 13px;
+            aspect-ratio: 1/1;
+            margin: 0;
+            background-color: rgba($pageColor, 0.5);
+            border-radius: 50px;
+            transition: $transition3;
+          }
+        }
+
+        &.active {
+          span {
+            width: 35px;
+            background-color: $pageColor;
+          }
+        }
+      }
+    }
+  }
+}

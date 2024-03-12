@@ -1,0 +1,137 @@
+.item-modal {
+  .modal-dialog {
+    .modal-content {
+      //   padding: 20px;
+
+      .modal-header,
+      .modal-body,
+      .modal-footer {
+        border: none;
+      }
+
+      .modal-header {
+        padding: 10px 10px 0;
+      }
+
+      .modal-body {
+        padding: 0 20px 30px;
+        width: 100%;
+        max-width: inherit;
+        overflow-x: hidden;
+      }
+
+      .close-btn {
+        display: flex;
+        border: none;
+        color: $mainColor;
+      }
+
+      .title {
+        color: $mainColor;
+      }
+
+      .product-desc {
+        .text {
+          -webkit-line-clamp: 3;
+        }
+      }
+
+      .product-details {
+        @include displayFlex(
+          $justify: space-between,
+          $wrap: wrap,
+          $gap: 30px 20px
+        );
+
+        li {
+          @include displayFlex($wrap: wrap, $gap: 10px);
+          flex-shrink: 0;
+
+          .product-id {
+            color: $whiteText;
+            background-color: $mainColor;
+            width: 60px;
+            aspect-ratio: 1;
+            @include displayFlex($justify: center);
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  &.payment-modal {
+    .payment-method {
+      @include displayFlex($gap: 10px);
+      background-color: $lightGrayColor;
+      border: none;
+
+      .icon {
+        width: 30px;
+        aspect-ratio: 1;
+      }
+    }
+
+    .btn-check:checked + .payment-method {
+      background-color: $lightMainColor;
+    }
+
+    .btn-primary {
+      padding-block: 8px;
+    }
+  }
+
+  &.action-modal {
+    text-align: center;
+    .modal-body {
+      .icon {
+        width: 120px;
+        margin-bottom: 20px;
+        margin-inline: auto;
+      }
+
+      .action-title {
+        margin-bottom: 20px;
+      }
+    }
+
+    .buttons {
+      $gap: 10px;
+      @include displayFlex($justify: space-between, $gap: $gap, $wrap: wrap);
+
+      .btn {
+        flex-basis: calc(50% - ($gap / 2));
+        flex: 1;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  &.notice-modal {
+    text-align: center;
+    .modal-body {
+      .animated-icon {
+        width: 130px;
+        aspect-ratio: 1;
+        margin-bottom: 20px;
+        margin-inline: auto;
+      }
+
+      .notice-title {
+        margin-bottom: 20px;
+      }
+
+      .buttons {
+        @include displayFlex($gap: 10px, $wrap: wrap);
+        max-width: inherit;
+
+        .btn {
+          min-width: unset;
+          flex: 1;
+          flex-shrink: 0;
+          padding-inline: 10px;
+        }
+      }
+    }
+  }
+}

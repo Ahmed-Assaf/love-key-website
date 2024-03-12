@@ -1,0 +1,20 @@
+.location-map-page {
+  .map-wrap {
+    margin-block-end: 30px;
+    .address-map {
+      aspect-ratio: 19/9;
+    }
+
+    .map-search {
+      margin-block-start: -10px;
+
+      input {
+        border: none;
+        outline: none;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

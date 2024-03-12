@@ -1,0 +1,152 @@
+body {
+  background-color: $pageColor;
+  font-family: inherit;
+  font-size: $fontSize;
+  direction: ltr;
+  text-align: start;
+  position: relative;
+  min-height: 100vh;
+  @include displayFlex($direction: column, $align: unset, $gap: 0);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+// set body direction to ltr in english
+[dir="rtl"] body {
+  direction: rtl;
+}
+
+// GLOBAL STYLE FOR ALL TEXT
+
+// TEXT FOR CARDS
+.text {
+  @extend %text; //EXTEND FROM RESET FILE
+  @include textTruncate();
+}
+
+// TEXT IN POST TYPE SINGLE PAGE
+.content-text {
+  @extend %text; //EXTEND FROM RESET FILE
+}
+
+// DIV WRAP IMAGES AND VEDIOS
+.image-wrap {
+  overflow: hidden;
+  @include displayFlex($justify: center);
+
+  img,
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &.contain {
+    img,
+    video {
+      object-fit: contain;
+    }
+  }
+}
+
+figure.image-wrap {
+  margin: 0;
+}
+
+// OVERLAY
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: #0000007d;
+  z-index: 3;
+}
+
+// FOR SECTIONS AND PAGES HEAD TITLE
+.head {
+  margin-bottom: 20px;
+
+  > .title {
+    line-height: 1;
+    position: relative;
+    text-transform: capitalize;
+    color: $mainColor;
+    font-family: $AlghadFont;
+  }
+
+  > .subtitle {
+    margin-top: 20px;
+  }
+
+  &.centered {
+    text-align: center;
+  }
+
+  &.borderd {
+    border: 1px solid $mainColor;
+    padding: 20px;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+}
+
+// DIV TAKES OVER ALL CONTENT USED FOR CLIKING TO CLOSE NAVBAR AND MODALS
+.overlay-all {
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition;
+  z-index: 20;
+  background-color: rgba($pageColor, 0.3);
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transition: $transition;
+  }
+}
+
+// GLOBAL STYLE FOR IFRAME
+iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+// CLASS FOR ALL PAGES TO CONTROL FIXED NAVBAR
+.padding-page {
+  padding-block: 120px 50px;
+}
+
+// GLOBAL STYLES FOR CONTACT LINKS
+.contact {
+  // color: $textColor;
+  @include displayFlex($direction: column, $align: flex-start);
+
+  li {
+    padding: 10px 0;
+
+    a {
+      @include displayFlex();
+      gap: 10px;
+
+      svg {
+        // background-color: $mainColor;
+        color: $mainColor;
+        padding: 5px;
+        border-radius: 50%;
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+// class for iframe map
+.location {
+  .map {
+    height: 400px;
+  }
+}
+
+// START EACH SECTION WITH SECTION TAG WITH PADDING
+section {
+  padding: 30px 0;
+  flex: 1;
+}

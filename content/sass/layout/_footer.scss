@@ -1,0 +1,48 @@
+.footer {
+  padding-block: 30px;
+  position: relative;
+  background-color: #f9f4f8;
+  box-shadow: 0 -4px 4px rgba(0, 0, 0, 0.15);
+
+  > .container {
+    > .row {
+      row-gap: 40px;
+    }
+  }
+
+  .logo {
+    max-width: 120px;
+  }
+
+  .page-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px 20px;
+
+    li {
+      flex-basis: 17%;
+      flex-shrink: 0;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+
+  .social-links {
+    @include displayFlex($justify: flex-start, $wrap: wrap, $gap: 20px 30px);
+
+    li {
+      a {
+        width: 40px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  font-size: 12px;
+}

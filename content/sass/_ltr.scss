@@ -1,0 +1,23 @@
+[dir="ltr"] {
+  .fa-chevron-left,
+  .fa-chevron-right,
+  .home-gifts .bg {
+    transform: scaleX(-1);
+  }
+
+  .home-about .bg {
+    transform: scaleX(1);
+  }
+
+  .home-about {
+    .slogan-s {
+      // transform: translate(-40%, -50%);
+
+      .image-wrap {
+        &::before {
+          transform: translate(50%, -50%);
+        }
+      }
+    }
+  }
+}

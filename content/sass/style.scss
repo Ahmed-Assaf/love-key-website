@@ -1,0 +1,49 @@
+//==================================== VARIABLES & GENERIC================================================================
+
+//>>>>> MAIN
+@import "abstract/variables";
+@import "abstract/mixins";
+@import "abstract/reset";
+@import "abstract/generic";
+@import "abstract/placeholders";
+@import "abstract/public-classes";
+
+// @import"components/search-div";
+
+// =============================LAYOUTS============================
+@import "layout/navbar";
+@import "layout/navbar-mobile";
+@import "layout/fixed-navbar";
+@import "layout/header";
+@import "layout/footer";
+
+// ======================================COMPONENTS================================
+@import "components/buttons";
+@import "components/social-media";
+@import "components/owl-carousel";
+@import "components/scroll-to-top";
+@import "components/modals";
+@import "components/loading";
+@import "components/select2";
+@import "components/form";
+@import "components/breadcrump";
+@import "components/pagination";
+@import "components/file-uploader";
+@import "components/main-links";
+@import "components/home-gifts";
+@import "components/home-about";
+@import "components/otp";
+
+// =========================================PAGES================================================
+@import "pages/categories";
+@import "pages/category-items";
+@import "pages/location-map";
+@import "pages/static";
+@import "pages/settings";
+@import "pages/auth";
+
+// ======================================ltr================================
+@import "ltr";
+
+// =================MEDIA QUERRIES =================
+@import "./media/media-quirres";

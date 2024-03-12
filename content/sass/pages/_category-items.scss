@@ -1,0 +1,23 @@
+.category-items-page {
+  .item-card {
+    text-align: center;
+
+    .image-wrap {
+      aspect-ratio: 1/1.1;
+      margin-block-end: 15px;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .category-items-page {
+    > .container {
+      > .row {
+        .col-md-2 {
+          width: 20%;
+        }
+      }
+    }
+  }
+}

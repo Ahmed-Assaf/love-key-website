@@ -1,0 +1,12 @@
+.code-form {
+  .code-input {
+    width: 50px;
+    aspect-ratio: 1;
+    box-shadow: none;
+    padding: 0;
+
+    &:focus {
+      border-color: $mainColor;
+    }
+  }
+}

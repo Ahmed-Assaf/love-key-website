@@ -1,0 +1,59 @@
+// // GLOBAL STYLES FOR SOCIAL LINKS
+// .social-links {
+//   @include displayFlex($justify: unset, $wrap: wrap, $gap: 10px);
+
+//   li {
+//     a {
+//       width: 27px;
+//       aspect-ratio: 1/1;
+//       border-radius: 6px;
+//       @include displayFlex($justify: center);
+//       color: $pageColor;
+//       background-color: $mainColor;
+//     }
+
+//     // IF NEED TO COLOR EACH ICON WITH ITS ORIGINAL COLOR
+//     &.instagram {
+//       a {
+//         background: linear-gradient(
+//           150deg,
+//           rgba(250, 225, 0, 1) 0%,
+//           rgba(252, 183, 32, 1) 20%,
+//           rgba(255, 121, 80, 1) 35%,
+//           rgba(255, 28, 116, 1) 56%,
+//           rgba(108, 28, 209, 1) 99%
+//         );
+//       }
+//     }
+
+//     &.whatsapp {
+//       a {
+//         background-color: #25d366;
+//       }
+//     }
+
+//     &.twitter {
+//       a {
+//         background-color: #000;
+//       }
+//     }
+
+//     &.facebook {
+//       a {
+//         background-color: #1877f2;
+//       }
+//     }
+//     &.messenger {
+//       a {
+//         background-color: #0099ff;
+//       }
+//     }
+
+//     &.snapchat {
+//       a {
+//         color: #000;
+//         background-color: #fffc00;
+//       }
+//     }
+//   }
+// }

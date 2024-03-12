@@ -1,0 +1,24 @@
+.select2 {
+  .selection {
+    .select2-selection--single {
+      height: fit-content;
+      .select2-selection__rendered {
+        padding: 0;
+        line-height: inherit;
+      }
+
+      .select2-selection__arrow {
+        display: none;
+      }
+    }
+  }
+}
+
+.select2-result {
+  @include displayFlex($gap: 10px);
+
+  .image-wrap {
+    height: 20px;
+    aspect-ratio: 1;
+  }
+}

@@ -1,0 +1,54 @@
+.categories-page {
+  > .container {
+    position: relative;
+  }
+  .categories-carousel {
+    position: unset;
+    .owl-nav {
+      margin: 0;
+      @include displayFlex($justify: space-between);
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 0;
+      padding-inline: 5px;
+
+      button {
+        margin: 0;
+        color: $mainColor !important;
+        background-color: transparent !important;
+      }
+    }
+  }
+  .category-card {
+    aspect-ratio: 1/1.3;
+    color: $whiteText;
+    position: relative;
+    transition: $transition3;
+    transform-origin: top left;
+    margin-block: 40px;
+
+    .title {
+      position: absolute;
+      font-family: $AlghadFont;
+      z-index: 1;
+    }
+
+    &::after {
+      @extend %pseudo-ele;
+      inset: 0;
+      background-color: rgba($mainColor, 0.5);
+      opacity: 0;
+      transition: $transition3;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}

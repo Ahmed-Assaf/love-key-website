@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="content/css/bootstrap.rtl.min.css" />
+    <!-- <link rel="stylesheet" href="content/css/bootstrap.min.css" /> -->
+
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="content/css/all-v6.css" />
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="content/css/animate.min.css" />
+
+    <!-- Select 2 CSS -->
+    <link rel="stylesheet" href="content/css/select2.min.css" />
+
+    <!-- Style.css -->
+    <link rel="stylesheet" href="content/css/style.css" />
+
+    <!-- Page Title -->
+    <title>مفاتيح الحب</title>
+  </head>
+  <body>
+    <section class="auth-page">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-md-5 col-sm-8 mx-auto">
+            <div class="phone-wrap h-100">
+              <div class="phone-frame h-100">
+                <div class="form-wrap">
+                  <div class="logo image-wrap contain">
+                    <img src="content/imgs/logo.svg" alt="love key" />
+                  </div>
+
+                  <form
+                    class="needs-validation row g-3"
+                    action="auth-verification-code.html"
+                    novalidate
+                  >
+                    <div class="form-group col-12">
+                      <label for="username" class="form-label"
+                        >الاسم كامل</label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        placeholder="أدخل اسم المستخدم"
+                        name="username"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        برجاء ادخال اسم المستخدم
+                      </div>
+                    </div>
+
+                    <div class="form-group col-12">
+                      <label for="phone" class="form-label">رقم الجوال</label>
+                      <div class="inputs-relative">
+                        <input
+                          type="tel"
+                          class="form-control"
+                          id="phone"
+                          placeholder="أدخل رقم الجوال"
+                          name="phone"
+                          required
+                        />
+
+                        <div class="invalid-feedback">
+                          برجاء ادخال رقم الجوال
+                        </div>
+
+                        <select
+                          class="form-select country-code float-input"
+                          id="country_code"
+                          data-placeholder="كود الدولة"
+                          name="country_code"
+                          required
+                        >
+                          <option
+                            value="966"
+                            data-flag="./content/imgs/saudi-flag.svg"
+                          ></option>
+                          <option
+                            value="20"
+                            data-flag="./content/imgs/egypt-flag.svg"
+                          ></option>
+                        </select>
+
+                        <div class="invalid-feedback">
+                          برجاء اختيار كود الدولة
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="form-group col-12">
+                      <label for="country" class="form-label">الدولة</label>
+
+                      <select
+                        class="form-select"
+                        id="country"
+                        name="country"
+                        required
+                      >
+                        <option value="" selected disabled>اختر الدولة</option>
+                        <option value="1">السعودية</option>
+                        <option value="2">مصر</option>
+                      </select>
+
+                      <div class="invalid-feedback">برجاء اختيار الدولة</div>
+                    </div>
+
+                    <div class="form-group col-12">
+                      <label for="password" class="form-label"
+                        >كلمة المرور</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="أدخل كلمة المرور"
+                        name="password"
+                        required
+                      />
+
+                      <a
+                        href="forgot-password.html"
+                        class="help-link small ms-auto"
+                      >
+                        هل نسيت كلمة السر؟
+                      </a>
+
+                      <div class="invalid-feedback">
+                        برجاء ادخال كلمة المرور
+                      </div>
+                    </div>
+
+                    <div class="form-group col-12">
+                      <label for="confirm_password" class="form-label"
+                        >تأكيد كلمة المرور</label
+                      >
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="confirm_password"
+                        placeholder="اعد كتابة كلمة المرور"
+                        name="confirm_password"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        كلمة المرور غير متطابقة
+                      </div>
+                    </div>
+
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value="agree_terms"
+                        id="agree_terms"
+                      />
+                      <label class="form-check-label small" for="agree_terms">
+                        بتسجيلك ف انت توافق على
+                        <a href="terms-and-conditions.html">الشروط والاحكام</a>
+                      </label>
+                    </div>
+
+                    <button
+                      class="btn btn-primary sm mx-auto mt-5"
+                      type="submit"
+                    >
+                      تسجيل
+                    </button>
+
+                    <div
+                      class="wrong-way d-flex align-items-center justify-content-center gap-2 small"
+                    >
+                      لديك حساب بالفعل؟
+                      <a href="login.html" class="text-decoration-underline"
+                        >تسجيل دخول</a
+                      >
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <div class="image-wrap contain frame-img start-img">
+                <img src="content/imgs/phone-frame-girl.svg" />
+              </div>
+
+              <div class="image-wrap contain frame-img end-img">
+                <img src="content/imgs/phone-frame-boy.svg" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="content/js/jquery.min.js"></script>
+
+    <script src="content/js/bootstrap.bundle.min.js"></script>
+
+    <script src="content/js/wow.min.js"></script>
+
+    <script src="content/js/select2.min.js"></script>
+
+    <script src="content/js/countries-select.js"></script>
+
+    <script src="content/js/main.js"></script>
+
+    <script>
+      (() => {
+        "use strict";
+        const forms = document.querySelectorAll(".needs-validation");
+
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              event.preventDefault();
+              form.classList.add("was-validated");
+              event.stopPropagation();
+            },
+            false
+          );
+        });
+      })();
+    </script>
+  </body>
+</html>

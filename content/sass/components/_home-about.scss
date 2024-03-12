@@ -1,0 +1,86 @@
+%pseudo-position {
+  @extend %pseudo-ele;
+  inset-block-start: 50%;
+  inset-inline-end: 50%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid $mainColor;
+  transform: translate(-50%, -50%);
+}
+
+.home-about {
+  padding-block: 140px;
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  > .container {
+    min-height: inherit;
+
+    > .row {
+      min-height: inherit;
+      row-gap: 30px;
+    }
+  }
+
+  .slogan-s {
+    height: 80%;
+    padding-inline-end: 25%;
+
+    .image-wrap {
+      position: relative;
+      height: 100%;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      overflow: visible;
+
+      img {
+        border-radius: 50%;
+      }
+
+      .overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba($mainColor, 0.5);
+        border-radius: 50%;
+      }
+
+      &::before {
+        width: calc(100% + 20px);
+        @extend %pseudo-position;
+      }
+
+      &::after {
+        width: 100%;
+        @extend %pseudo-position;
+        border-width: 2px;
+        border-style: dashed;
+        opacity: 0.5;
+        transform: unset;
+        scale: 1.25;
+        transform-origin: center;
+        animation: rotate 40s infinite linear 0s forwards;
+        inset: 0;
+      }
+    }
+  }
+
+  .text {
+    -webkit-line-clamp: unset;
+  }
+
+  .bg {
+    position: absolute;
+    z-index: -1;
+    inset-inline-end: 0;
+    inset-block-end: 30px;
+    width: 90px;
+    transform: scaleX(-1);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

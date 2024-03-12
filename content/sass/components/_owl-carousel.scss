@@ -1,0 +1,53 @@
+// GLOBAL STYLES FOR OWL NAV AND OWL DOTS
+// .owl-carousel {
+// .owl-dots {
+//   position: absolute;
+//   bottom: 20px;
+//   width: 100%;
+//   inset-inline-start: 0;
+//   @include displayFlex($justify: center, $gap: 5px);
+
+//   .owl-dot {
+//     span {
+//       &,
+//       &:hover {
+//         display: block;
+//         width: 13px;
+//         aspect-ratio: 1/1;
+//         margin: 0;
+//         background-color: rgba($pageColor, 0.5);
+//         border-radius: 50px;
+//         transition: $transition3;
+//       }
+//     }
+
+//     &.active {
+//       span {
+//         width: 35px;
+//         background-color: $pageColor;
+//       }
+//     }
+//   }
+// }
+
+// .owl-nav {
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   color: $whiteText;
+//   width: 100%;
+//   @include displayFlex($justify: space-between, $gap: 10px);
+//   height: 0;
+
+//   button.owl-prev,
+//   button.owl-next {
+//     width: 40px;
+//     aspect-ratio: 1/1;
+//     @include displayFlex($justify: center);
+//     border: 2px solid $whiteText;
+//     border-radius: 50%;
+//     transition: $transition3;
+//   }
+// }
+// }

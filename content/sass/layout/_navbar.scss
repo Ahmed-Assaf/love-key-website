@@ -1,0 +1,124 @@
+.navbar {
+  padding-block: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+
+  .navbar-collapse {
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .nav-flex {
+    @include displayFlex($justify: space-between, $gap: 40px);
+
+    .navbar-brand {
+      width: 110px;
+      margin: 0;
+      padding: 0;
+      flex-shrink: 0;
+
+      img {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+
+    .navbar-nav {
+      gap: 40px;
+    }
+
+    .nav-link {
+      @include displayFlex($gap: 5px);
+      opacity: 1;
+      color: inherit;
+      padding: 0;
+
+      .image-wrap {
+        width: 16px;
+        aspect-ratio: 1;
+      }
+
+      &.dropdown-toggle {
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    .dropdown {
+      .dropdown-menu {
+        border: none;
+        border-radius: 0;
+        margin-block-start: 10px;
+        max-width: 300px;
+
+        &::before {
+          @extend %pseudo-ele;
+          inset-inline-start: 5px;
+          inset-block-end: 100%;
+          border: 4px solid transparent;
+          border-bottom-color: $whiteText;
+        }
+
+        &.dropdown-menu-end {
+          &::before {
+            inset-inline-start: unset;
+            inset-inline-end: 5px;
+          }
+        }
+
+        li {
+          padding: 8px 10px;
+          @include displayFlex($justify: space-between, $gap: 10px);
+          .dropdown-item {
+            @include displayFlex($gap: 10px);
+            font-size: 10px;
+            color: inherit;
+            background-color: transparent;
+            padding: 0;
+            flex: 1;
+            text-wrap: wrap;
+
+            .image-wrap {
+              width: 20px;
+              flex-shrink: 0;
+            }
+          }
+
+          .btn {
+            &.remove {
+              color: $redColor;
+              padding: 0;
+              font-size: 12px;
+            }
+          }
+        }
+
+        &.notifications {
+          li {
+            align-items: flex-start;
+          }
+          .dropdown-item {
+            align-items: flex-start;
+
+            .image-wrap {
+              width: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .controls {
+      @include displayFlex($gap: 40px);
+    }
+
+    // CLASS FOR HAMBURGER ICON FOR  MENU
+    .navbar-toggler {
+      padding: 0;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      color: $mainColor;
+    }
+  }
+}

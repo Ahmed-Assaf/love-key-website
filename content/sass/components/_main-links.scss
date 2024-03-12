@@ -1,0 +1,57 @@
+.home-main-links {
+  .circle-col {
+    &:nth-of-type(1) {
+      .link-circle {
+        background-color: rgba($lightMainColor, 0.5);
+      }
+    }
+
+    &:nth-of-type(2) {
+      .link-circle {
+        background-color: rgba(249, 238, 182, 0.5);
+      }
+    }
+
+    &:nth-of-type(3) {
+      .link-circle {
+        background-color: rgba(200, 231, 247, 0.5);
+      }
+    }
+
+    .link-circle {
+      width: 60%;
+      aspect-ratio: 1;
+      @include displayFlex($direction: column, $justify: center, $gap: 0);
+      border-radius: 50%;
+      color: $mainColor;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      margin-inline: auto;
+
+      .image-wrap {
+        width: 40%;
+        aspect-ratio: 1;
+      }
+
+      .title {
+        font-family: $AlghadFont;
+        font-weight: bold;
+        margin-block-start: 10px;
+        display: none;
+        transform-origin: center;
+      }
+
+      &:hover {
+        width: 65%;
+        background-color: $pageColor;
+
+        .image-wrap {
+          width: 42%;
+        }
+
+        .title {
+          display: block;
+        }
+      }
+    }
+  }
+}

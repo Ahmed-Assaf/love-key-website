@@ -1,0 +1,28 @@
+/* to-top-btn */
+.up {
+  position: fixed;
+  inset-block-end: 20px;
+  inset-inline-end: 20px;
+  width: 30px;
+  aspect-ratio: 1/1;
+  @include displayFlex($justify: center);
+  background-color: $mainColor;
+  border: none;
+  z-index: 10;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(calc(100% + 20px));
+  transition: $transition;
+  cursor: pointer;
+
+  img {
+    width: 25px;
+  }
+  &.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  & > i {
+    color: $pageColor;
+  }
+}
