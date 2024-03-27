@@ -83,6 +83,9 @@
 form {
   // GLOBAL STYLE FOR ALL INPUTS HAS FORM-GROUP AND FORM-CONTROL CLASS
   .form-group {
+    position: relative;
+    z-index: 1;
+
     .form-label,
     .form-text {
       font-size: 12px;

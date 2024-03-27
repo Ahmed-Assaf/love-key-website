@@ -242,67 +242,112 @@
 
     <section class="profile-page">
       <div class="container">
-        <form
-          class="row g-3 needs-validation"
-          action="verification-code.html"
-          novalidate
-        >
-          <div class="form-wrap mb-4">
-            <div class="form-heading">
-              <h2 class="title ghad-font h5">تغيير رقم الجوال</h2>
-            </div>
+        <div class="form-wrap">
+          <div class="form-heading">
+            <h2 class="title ghad-font h5">أضف عنوان جديد</h2>
+            <h3 class="subtitle h6">قم بإدخال عنوانك</h3>
+          </div>
+
+          <form class="row g-3 needs-validation" novalidate>
             <div class="form-group col-12">
-              <label for="phone" class="form-label">رقم الجوال</label>
-              <div class="inputs-relative">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  placeholder="أدخل رقم الجوال"
-                  name="phone"
-                  required
-                />
+              <label for="saved_address" class="form-label"
+                >الموقع الجغرافى</label
+              >
+              <div class="row">
+                <div class="col-md-6">
+                  <select
+                    class="form-select"
+                    id="saved_address"
+                    name="saved_address"
+                    required
+                  >
+                    <option value="" selected disabled>
+                      اختر من العناوين المحفوظة
+                    </option>
+                    <option value="1">مصر</option>
+                    <option value="1">مصر</option>
+                    <option value="1">مصر</option>
+                  </select>
+                  <div class="invalid-feedback">برجاء ادخال العنوان</div>
+                </div>
 
-                <div class="invalid-feedback">برجاء ادخال رقم الجوال</div>
+                <div class="col-md-6">
+                  <a href="location-map.html">
+                    <div class="input-icon">
+                      <div class="image-wrap contain float-icon-end">
+                        <img src="content/icons/map.svg" />
+                      </div>
 
-                <select
-                  class="form-select country-code float-input"
-                  id="country_code"
-                  data-placeholder="كود الدولة"
-                  name="country_code"
-                  required
-                >
-                  <option
-                    value="966"
-                    data-flag="./content/imgs/saudi-flag.svg"
-                  ></option>
-                  <option
-                    value="20"
-                    data-flag="./content/imgs/egypt-flag.svg"
-                  ></option>
-                </select>
-
-                <div class="invalid-feedback">برجاء اختيار كود الدولة</div>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="map_location"
+                        placeholder="حدد العنوان على الخريطة"
+                        name="map_location"
+                        readonly
+                      />
+                    </div>
+                  </a>
+                </div>
               </div>
             </div>
 
             <div class="form-group col-12">
-              <label for="password" class="form-label">كلمة المرور</label>
+              <label for="phone" class="form-label">رقم المنزل</label>
               <input
-                type="password"
+                type="tel"
                 class="form-control"
-                id="password"
-                placeholder="أدخل كلمة المرور"
-                name="password"
+                id="phone"
+                placeholder="أدخل رقم المنزل"
+                name="phone"
                 required
               />
 
-              <div class="invalid-feedback">برجاء ادخال كلمة المرور</div>
+              <div class="invalid-feedback">برجاء ادخال رقم المنزل</div>
             </div>
-          </div>
 
-          <button class="btn btn-primary mx-auto" type="submit">تفعيل</button>
-        </form>
+            <div class="form-group col-12">
+              <label for="street" class="form-label">اسم الشارع</label>
+              <input
+                type="text"
+                class="form-control"
+                id="street"
+                placeholder="أدخل اسم الشارع"
+                name="street"
+                required
+              />
+
+              <div class="invalid-feedback">برجاء ادخال اسم الشارع</div>
+            </div>
+
+            <div class="form-group col-12">
+              <label for="home-numbers" class="form-label"> رقم العمارة</label>
+
+              <input
+                type="text"
+                class="form-control"
+                id="home-numbers"
+                name="home-numbers"
+                placeholder="أدخل اسم الحي"
+                required
+              />
+              <div class="invalid-feedback">برجاء ادخال اسم الحي</div>
+            </div>
+
+            <div class="form-group col-12">
+              <label for="message" class="form-label">معلومات اضافية</label>
+
+              <textarea
+                name="message"
+                class="form-control"
+                id="message"
+                placeholder="ادخل رسالتك"
+              ></textarea>
+            </div>
+
+            <button class="btn btn-primary mx-auto" type="submit">حفظ</button>
+          </form>
+        </div>
       </div>
     </section>
 
@@ -395,22 +440,7 @@
     <script src="content/js/main.js"></script>
 
     <script>
-      (() => {
-        "use strict";
-        const forms = document.querySelectorAll(".needs-validation");
-
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              event.preventDefault();
-              form.classList.add("was-validated");
-              event.stopPropagation();
-            },
-            false
-          );
-        });
-      })();
+      $(document).ready(function () {});
     </script>
   </body>
 </html>

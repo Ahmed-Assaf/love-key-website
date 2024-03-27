@@ -1,0 +1,41 @@
+.gifts-history {
+  .list-wrap {
+    background-color: rgba($lightMainColor, 0.5);
+    padding-block: 10px;
+    border-radius: 10px;
+
+    li:not(:last-of-type) {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .gift-item-card {
+      @include displayFlex($gap: 15px, $wrap: wrap);
+      padding: 12px 30px;
+
+      .gift-icon {
+        width: 55px;
+        aspect-ratio: 1;
+        flex-shrink: 0;
+      }
+
+      .content {
+        flex: 1;
+
+        .text {
+          line-height: initial;
+        }
+      }
+
+      .link {
+        text-align: center;
+        color: $mainColor;
+
+        .icon {
+          width: 40px;
+          margin-inline: auto;
+          margin-block-end: 10px;
+        }
+      }
+    }
+  }
+}

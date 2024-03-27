@@ -12,8 +12,15 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="content/css/all-v6.css" />
 
+    <!-- Fancy Box CSS -->
+    <link rel="stylesheet" href="content/css/fancybox.css" />
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="content/css/animate.min.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="content/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="content/css/owl.theme.default.css" />
 
     <!-- Select 2 CSS -->
     <link rel="stylesheet" href="content/css/select2.min.css" />
@@ -240,69 +247,155 @@
 
     <span class="nav-overlay"></span>
 
-    <section class="profile-page">
+    <section class="order-gift-page wallet-page">
       <div class="container">
-        <form
-          class="row g-3 needs-validation"
-          action="verification-code.html"
-          novalidate
-        >
-          <div class="form-wrap mb-4">
-            <div class="form-heading">
-              <h2 class="title ghad-font h5">تغيير رقم الجوال</h2>
-            </div>
-            <div class="form-group col-12">
-              <label for="phone" class="form-label">رقم الجوال</label>
-              <div class="inputs-relative">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  placeholder="أدخل رقم الجوال"
-                  name="phone"
-                  required
-                />
+        <div class="form-wrap">
+          <div class="form-heading"></div>
 
-                <div class="invalid-feedback">برجاء ادخال رقم الجوال</div>
-
-                <select
-                  class="form-select country-code float-input"
-                  id="country_code"
-                  data-placeholder="كود الدولة"
-                  name="country_code"
-                  required
-                >
-                  <option
-                    value="966"
-                    data-flag="./content/imgs/saudi-flag.svg"
-                  ></option>
-                  <option
-                    value="20"
-                    data-flag="./content/imgs/egypt-flag.svg"
-                  ></option>
-                </select>
-
-                <div class="invalid-feedback">برجاء اختيار كود الدولة</div>
+          <form class="row g-3 needs-validation row-gap-24" novalidate>
+            <div class="col-lg-4 col-md-5">
+              <div class="image-slogan image-wrap contain">
+                <img src="content/imgs/wallet-bro.png" />
               </div>
             </div>
 
-            <div class="form-group col-12">
-              <label for="password" class="form-label">كلمة المرور</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="أدخل كلمة المرور"
-                name="password"
-                required
-              />
+            <div class="col-lg-8 col-md-7">
+              <h2 class="title ghad-font h5 mb-3">المحفظة</h2>
+              <h3 class="subtitle h5 mb-5">رصيدك الحالي</h3>
 
-              <div class="invalid-feedback">برجاء ادخال كلمة المرور</div>
+              <div class="wallet-details mb-4">
+                <div class="image image-wrap contain">
+                  <img src="content/icons/wallet-icon.svg" />
+                </div>
+
+                <div class="details">
+                  <p class="mb-1 h5">5000</p>
+                  <h6 class="gehad-font fw-bold h5 mb-0">ريال</h6>
+                </div>
+              </div>
+
+              <button
+                class="btn btn-primary"
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#paymentModal"
+              >
+                شحن الرصيد
+              </button>
+            </div>
+
+            <!-- Modal -->
+            <div
+              class="modal item-modal payment-modal fade"
+              id="paymentModal"
+              tabindex="-1"
+              aria-labelledby="paymentModalLabel"
+              aria-hidden="true"
+            >
+              <div
+                class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
+              >
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1
+                      class="modal-title text-center flex-fill h6"
+                      id="paymentModalLabel"
+                    >
+                      اختر طريقة الدفع
+                    </h1>
+
+                    <button
+                      type="button"
+                      class="btn close-btn ms-auto p-0"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    >
+                      <i class="fa-light fa-xmark"></i>
+                    </button>
+                  </div>
+
+                  <div class="modal-body pt-3 pb-0">
+                    <div class="form-group mb-3">
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="payment-method"
+                        id="wallet"
+                        value="wallet"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label class="btn payment-method h5" for="wallet">
+                        <div class="image-wrap contain icon">
+                          <img src="content/icons/wallet-payment.svg" />
+                        </div>
+                        محفظة
+                      </label>
+                    </div>
+
+                    <div class="form-group mb-3">
+                      <input
+                        type="radio"
+                        class="btn-check"
+                        name="payment-method"
+                        id="e-pay"
+                        id="e-pay"
+                        autocomplete="off"
+                      />
+                      <label class="btn payment-method h5" for="e-pay">
+                        <div class="image-wrap contain icon">
+                          <img src="content/icons/card-payment.svg" />
+                        </div>
+                        إلكتروني
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer pt-0">
+                    <button type="submit" class="btn btn-primary">
+                      تأكيد الدفع
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <div class="image-wrap absolute-image contain">
+            <img src="content/imgs/coins.png" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Modal -->
+      <div
+        class="modal item-modal action-modal fade"
+        id="actionModal"
+        tabindex="-1"
+        aria-labelledby="actionModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-body pt-3">
+              <div class="image-wrap contain icon">
+                <img src="content/icons/success.svg" />
+              </div>
+
+              <h5 class="action-title h6">تم شحن المحفظة بنجاح</h5>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                رجوع
+              </button>
             </div>
           </div>
-
-          <button class="btn btn-primary mx-auto" type="submit">تفعيل</button>
-        </form>
+        </div>
       </div>
     </section>
 
@@ -386,31 +479,21 @@
 
     <script src="content/js/bootstrap.bundle.min.js"></script>
 
+    <script src="content/js/fancybox.umd.js"></script>
+
+    <script src="content/js/owl.carousel.min.js"></script>
+
     <script src="content/js/wow.min.js"></script>
 
     <script src="content/js/select2.min.js"></script>
 
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+
     <script src="content/js/countries-select.js"></script>
 
     <script src="content/js/main.js"></script>
-
-    <script>
-      (() => {
-        "use strict";
-        const forms = document.querySelectorAll(".needs-validation");
-
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              event.preventDefault();
-              form.classList.add("was-validated");
-              event.stopPropagation();
-            },
-            false
-          );
-        });
-      })();
-    </script>
   </body>
 </html>

@@ -12,8 +12,15 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="content/css/all-v6.css" />
 
+    <!-- Fancy Box CSS -->
+    <link rel="stylesheet" href="content/css/fancybox.css" />
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="content/css/animate.min.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="content/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="content/css/owl.theme.default.css" />
 
     <!-- Select 2 CSS -->
     <link rel="stylesheet" href="content/css/select2.min.css" />
@@ -240,69 +247,49 @@
 
     <span class="nav-overlay"></span>
 
-    <section class="profile-page">
+    <section class="order-gift-page wallet-page">
       <div class="container">
-        <form
-          class="row g-3 needs-validation"
-          action="verification-code.html"
-          novalidate
-        >
-          <div class="form-wrap mb-4">
-            <div class="form-heading">
-              <h2 class="title ghad-font h5">تغيير رقم الجوال</h2>
-            </div>
-            <div class="form-group col-12">
-              <label for="phone" class="form-label">رقم الجوال</label>
-              <div class="inputs-relative">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  placeholder="أدخل رقم الجوال"
-                  name="phone"
-                  required
-                />
+        <div class="form-wrap">
+          <div class="form-heading"></div>
 
-                <div class="invalid-feedback">برجاء ادخال رقم الجوال</div>
-
-                <select
-                  class="form-select country-code float-input"
-                  id="country_code"
-                  data-placeholder="كود الدولة"
-                  name="country_code"
-                  required
-                >
-                  <option
-                    value="966"
-                    data-flag="./content/imgs/saudi-flag.svg"
-                  ></option>
-                  <option
-                    value="20"
-                    data-flag="./content/imgs/egypt-flag.svg"
-                  ></option>
-                </select>
-
-                <div class="invalid-feedback">برجاء اختيار كود الدولة</div>
+          <div class="row">
+            <div class="col-lg-4 col-md-5">
+              <div class="image-slogan image-wrap contain">
+                <img src="content/imgs/home-keys-wallet-image.png" />
               </div>
             </div>
 
-            <div class="form-group col-12">
-              <label for="password" class="form-label">كلمة المرور</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="أدخل كلمة المرور"
-                name="password"
-                required
-              />
+            <div class="col-lg-8 col-md-7">
+              <div class="head">
+                <h2 class="h1 title">محفظة المفاتيح</h2>
+                <h6 class="h5 subtitle">مكان تلاقي جميع مفاتيح هداياك</h6>
+              </div>
 
-              <div class="invalid-feedback">برجاء ادخال كلمة المرور</div>
+              <p>
+                لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل
+                ليتصور طريقه لوريم ايبسوم .
+              </p>
+
+              <a href="gifts-history.html" class="btn btn-gray mb-3">
+                <span class="icon image-wrap contain">
+                  <img src="content/icons/vertical-key.svg" alt="key" />
+                </span>
+                الهدايا المقدمَة
+              </a>
+
+              <a href="gifts-history.html" class="btn btn-gray">
+                <span class="icon image-wrap contain">
+                  <img src="content/icons/vertical-key.svg" alt="key" />
+                </span>
+                الهدايا المقدمَة إليك
+              </a>
             </div>
           </div>
 
-          <button class="btn btn-primary mx-auto" type="submit">تفعيل</button>
-        </form>
+          <div class="image-wrap absolute-image contain">
+            <img src="content/imgs/keys-wallet.png" />
+          </div>
+        </div>
       </div>
     </section>
 
@@ -386,31 +373,21 @@
 
     <script src="content/js/bootstrap.bundle.min.js"></script>
 
+    <script src="content/js/fancybox.umd.js"></script>
+
+    <script src="content/js/owl.carousel.min.js"></script>
+
     <script src="content/js/wow.min.js"></script>
 
     <script src="content/js/select2.min.js"></script>
 
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+
     <script src="content/js/countries-select.js"></script>
 
     <script src="content/js/main.js"></script>
-
-    <script>
-      (() => {
-        "use strict";
-        const forms = document.querySelectorAll(".needs-validation");
-
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              event.preventDefault();
-              form.classList.add("was-validated");
-              event.stopPropagation();
-            },
-            false
-          );
-        });
-      })();
-    </script>
   </body>
 </html>

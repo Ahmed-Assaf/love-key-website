@@ -12,8 +12,15 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="content/css/all-v6.css" />
 
+    <!-- Fancy Box CSS -->
+    <link rel="stylesheet" href="content/css/fancybox.css" />
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="content/css/animate.min.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="content/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="content/css/owl.theme.default.css" />
 
     <!-- Select 2 CSS -->
     <link rel="stylesheet" href="content/css/select2.min.css" />
@@ -240,69 +247,182 @@
 
     <span class="nav-overlay"></span>
 
-    <section class="profile-page">
+    <section class="order-gift-page">
       <div class="container">
-        <form
-          class="row g-3 needs-validation"
-          action="verification-code.html"
-          novalidate
-        >
-          <div class="form-wrap mb-4">
-            <div class="form-heading">
-              <h2 class="title ghad-font h5">تغيير رقم الجوال</h2>
-            </div>
-            <div class="form-group col-12">
-              <label for="phone" class="form-label">رقم الجوال</label>
-              <div class="inputs-relative">
-                <input
-                  type="tel"
-                  class="form-control"
-                  id="phone"
-                  placeholder="أدخل رقم الجوال"
-                  name="phone"
-                  required
-                />
-
-                <div class="invalid-feedback">برجاء ادخال رقم الجوال</div>
-
-                <select
-                  class="form-select country-code float-input"
-                  id="country_code"
-                  data-placeholder="كود الدولة"
-                  name="country_code"
-                  required
-                >
-                  <option
-                    value="966"
-                    data-flag="./content/imgs/saudi-flag.svg"
-                  ></option>
-                  <option
-                    value="20"
-                    data-flag="./content/imgs/egypt-flag.svg"
-                  ></option>
-                </select>
-
-                <div class="invalid-feedback">برجاء اختيار كود الدولة</div>
-              </div>
-            </div>
-
-            <div class="form-group col-12">
-              <label for="password" class="form-label">كلمة المرور</label>
-              <input
-                type="password"
-                class="form-control"
-                id="password"
-                placeholder="أدخل كلمة المرور"
-                name="password"
-                required
-              />
-
-              <div class="invalid-feedback">برجاء ادخال كلمة المرور</div>
-            </div>
+        <div class="form-wrap">
+          <div class="form-heading">
+            <h2 class="title ghad-font h5">تفاصيل الهدية</h2>
           </div>
 
-          <button class="btn btn-primary mx-auto" type="submit">تفعيل</button>
-        </form>
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="form-group col-12">
+              <label for="name" class="form-label">اسم المقدمة إليه</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                value="مي محمود"
+                readonly
+              />
+            </div>
+
+            <div class="form-group col-12">
+              <label for="gift-date" class="form-label">موعد الهدية</label>
+              <input
+                type="date"
+                class="form-control"
+                id="gift-date"
+                name="gift-date"
+                value="2018-07-22"
+                readonly
+              />
+            </div>
+
+            <div class="form-group col-12">
+              <label for="gift-type" class="form-label">نوع الهدية</label>
+              <input
+                type="text"
+                class="form-control"
+                id="gift-type"
+                name="gift-type"
+                value="عطر نسائي"
+                readonly
+              />
+            </div>
+
+            <div class="form-group col-12">
+              <label for="message" class="form-label">الرسالة مع الهدية</label>
+
+              <textarea
+                name="message"
+                class="form-control"
+                id="message"
+                readonly
+              >
+لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع
+            </textarea
+              >
+            </div>
+
+            <div class="form-group col-12">
+              <label for="gift-accept-date" class="form-label"
+                >تاريخ قبول الهدية</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="gift-accept-date"
+                name="gift-accept-date"
+                value="2018-07-22"
+                readonly
+              />
+            </div>
+
+            <div class="form-group col-12">
+              <label for="gift-number" class="form-label"
+                >رقم المفتاح (رقم المنتج)</label
+              >
+              <input
+                type="number"
+                class="form-control"
+                id="gift-number"
+                name="gift-number"
+                value="50"
+                readonly
+              />
+            </div>
+
+            <div class="form-group col-12">
+              <label for="love-status" class="form-label">حالة الحب</label>
+
+              <select
+                class="form-select result-input"
+                id="love-status"
+                name="love-status"
+                readonly
+              >
+                <option value="" disabled>اختر حالة الحب</option>
+                <option value="1" selected>العشق</option>
+                <option value="1">العشق</option>
+                <option value="1">العشق</option>
+              </select>
+            </div>
+          </form>
+
+          <div class="image-wrap absolute-image contain">
+            <img src="content/imgs/gift-order.png" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Success Modal -->
+      <div
+        class="modal item-modal action-modal fade"
+        id="actionModal"
+        tabindex="-1"
+        aria-labelledby="actionModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-body pt-3">
+              <div class="image-wrap contain icon">
+                <img src="content/icons/success.svg" />
+              </div>
+
+              <h5 class="action-title h6">تم تأكيد الدفع بنجاح</h5>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#noticeModal"
+              >
+                متابعة
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notice Modal -->
+      <div
+        class="modal item-modal notice-modal fade"
+        id="noticeModal"
+        tabindex="-1"
+        aria-labelledby="noticeModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-body pt-3">
+              <dotlottie-player
+                src="content/json/24.json"
+                background="transparent"
+                speed="1"
+                class="animated-icon"
+                loop
+                autoplay
+              ></dotlottie-player>
+
+              <h5 class="notice-title h6">تم تأكيد الدفع بنجاح</h5>
+
+              <div class="buttons">
+                <a href="index.html" class="btn btn-primary">
+                  الرجوع للرئيسية
+                </a>
+                <a href="sent-orders.html" class="btn btn-secondary">
+                  متابعة الطلب
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -386,31 +506,52 @@
 
     <script src="content/js/bootstrap.bundle.min.js"></script>
 
+    <script src="content/js/fancybox.umd.js"></script>
+
+    <script src="content/js/owl.carousel.min.js"></script>
+
     <script src="content/js/wow.min.js"></script>
 
     <script src="content/js/select2.min.js"></script>
+
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
 
     <script src="content/js/countries-select.js"></script>
 
     <script src="content/js/main.js"></script>
 
     <script>
-      (() => {
-        "use strict";
-        const forms = document.querySelectorAll(".needs-validation");
+      $(() => {
+        // form submit
+        // form validation
+        (() => {
+          "use strict";
+          const forms = document.querySelectorAll(".needs-validation");
 
-        Array.from(forms).forEach((form) => {
-          form.addEventListener(
-            "submit",
-            (event) => {
-              event.preventDefault();
-              form.classList.add("was-validated");
-              event.stopPropagation();
-            },
-            false
-          );
-        });
-      })();
+          Array.from(forms).forEach((form) => {
+            form.addEventListener(
+              "submit",
+              (event) => {
+                event.preventDefault();
+                if (!form.checkValidity()) {
+                  console.log("form submit");
+                } else {
+                  // ============ run your submit logic here
+                  $("#actionModal").modal("show");
+                }
+
+                $("#paymentModal").modal("hide");
+
+                form.classList.add("was-validated");
+              },
+              false
+            );
+          });
+        })();
+      });
     </script>
   </body>
 </html>

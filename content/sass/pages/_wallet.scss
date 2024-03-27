@@ -1,0 +1,17 @@
+.wallet-page {
+  .image-slogan {
+    padding: 10px;
+    background-color: rgba($lightMainColor, 0.5);
+    aspect-ratio: 1/0.8;
+    border-radius: 10px;
+  }
+
+  .wallet-details {
+    @include displayFlex($wrap: wrap);
+
+    .image {
+      aspect-ratio: 1/1;
+      width: 70px;
+    }
+  }
+}

@@ -117,7 +117,12 @@
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="logout.html">
+                  <a
+                    class="dropdown-item"
+                    href="#"
+                    data-bs-toggle="modal"
+                    data-bs-target="#logoutModal"
+                  >
                     <div class="image-wrap contain">
                       <img src="content/icons/logout.svg" alt="logout" />
                     </div>
@@ -201,6 +206,41 @@
         </button>
       </div>
     </nav>
+
+    <!-- Success Modal -->
+    <div
+      class="modal item-modal action-modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      aria-labelledby="logoutModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-body pt-3">
+            <div class="image-wrap contain icon">
+              <img src="content/icons/logout-confirm.png" />
+            </div>
+
+            <h5 class="action-title h6">هل حقًا تود حذف الحساب ؟</h5>
+
+            <div class="buttons">
+              <button class="btn btn-secondary sm">نعم</button>
+
+              <button
+                type="button"
+                data-bs-dismiss="modal"
+                class="btn btn-primary sm"
+              >
+                لا
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <span class="nav-overlay"></span>
 
