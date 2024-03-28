@@ -1,0 +1,90 @@
+.order-details {
+  .steps {
+    background-color: rgba($color: #f9eeb6, $alpha: 0.3);
+
+    .steps-wrap {
+      @include displayFlex($align: flex-start, $justify: center);
+      position: relative;
+
+      .step {
+        text-align: center;
+        flex: 1;
+        flex-basis: 0.25;
+        z-index: 1;
+
+        .dot {
+          display: block;
+          width: 16px;
+          aspect-ratio: 1;
+          background-color: $whiteText;
+          border: 2px solid $mainColor;
+          outline: 10px solid $mainColor;
+          margin: 0 auto 22px;
+          border-radius: 50%;
+        }
+      }
+
+      &::after {
+        @extend %pseudo-ele;
+        top: 8px;
+        width: 75%;
+        display: block;
+        border: 1px dashed $mainColor;
+        transform: translateY(-50%);
+        z-index: 0;
+      }
+    }
+  }
+
+  .details-wrap {
+    background-color: $whiteText;
+    border-radius: 15px;
+    margin-block: 50px;
+    padding: 0;
+
+    .order-head {
+      padding: 40px 30px;
+    }
+
+    .order-slog {
+      .slog-title {
+        color: $mainColor;
+        background-color: $lightMainColor;
+        padding: 17px 30px;
+        width: fit-content;
+        border-start-end-radius: 10px;
+        border-end-end-radius: 10px;
+      }
+
+      .slog-content {
+        padding: 40px 30px;
+      }
+    }
+
+    .form-control {
+      background-color: rgba($color: #434343, $alpha: 0.1);
+      border: none;
+      padding: 15px 20px;
+      border-radius: 12px;
+    }
+
+    .addon-input {
+      position: relative;
+      @include displayFlex($gap: 0);
+
+      .form-control {
+        padding-inline-end: 110px;
+      }
+
+      .addon {
+        position: absolute;
+        @include displayFlex($gap: 10px);
+        inset-inline-end: 20px;
+        color: #979797;
+        .image-wrap {
+          width: 35px;
+        }
+      }
+    }
+  }
+}

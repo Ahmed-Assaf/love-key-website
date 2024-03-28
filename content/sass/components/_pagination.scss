@@ -2,7 +2,7 @@
   @include displayFlex($justify: center);
 
   .pagination {
-    @include displayFlex($justify: center, $gap: 10px);
+    @include displayFlex($justify: center, $gap: 15px);
     .page-item {
       .page-link {
         padding: 0;
@@ -10,6 +10,7 @@
         background-color: transparent;
         border: none;
         font-size: 14px;
+        box-shadow: none;
 
         &.active {
           color: $mainColor;
@@ -24,7 +25,8 @@
           color: $whiteText;
           background-color: $mainColor;
           @include displayFlex($justify: center);
-          border-radius: 8px;
+          border: 2px solid $lightMainColor;
+          border-radius: 6px;
         }
 
         &.disabled {

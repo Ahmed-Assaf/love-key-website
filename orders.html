@@ -247,182 +247,32 @@
 
     <span class="nav-overlay"></span>
 
-    <section class="order-gift-page">
+    <section class="orders-page">
       <div class="container">
-        <div class="form-wrap">
-          <div class="form-heading">
-            <h2 class="title ghad-font h5">تفاصيل الهدية</h2>
-          </div>
+        <div class="row">
+          <a href="sent-orders.html" class="col-md-4 order-type-card">
+            <h3 class="title ghad-font">الطلبات المُرسَلة</h3>
+            <div class="bg image-wrap">
+              <img src="content/imgs/sent-orders.svg" alt="sent-orders" />
+            </div>
+          </a>
 
-          <form class="row g-3 needs-validation" novalidate>
-            <div class="form-group col-12">
-              <label for="name" class="form-label">اسم المقدمة إليه</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                value="مي محمود"
-                readonly
+          <a href="received-orders.html" class="col-md-4 order-type-card">
+            <h3 class="title ghad-font">الطلبات المُقدَمة إليك</h3>
+            <div class="bg image-wrap">
+              <img
+                src="content/imgs/received-orders.svg"
+                alt="received-orders"
               />
             </div>
+          </a>
 
-            <div class="form-group col-12">
-              <label for="gift-date" class="form-label">موعد الهدية</label>
-              <input
-                type="date"
-                class="form-control"
-                id="gift-date"
-                name="gift-date"
-                value="2018-07-22"
-                readonly
-              />
+          <a href="#" class="col-md-4 order-type-card soon">
+            <h3 class="title ghad-font">طلبات المتجر</h3>
+            <div class="bg image-wrap">
+              <img src="content/imgs/shop-orders.svg" alt="shop-orders" />
             </div>
-
-            <div class="form-group col-12">
-              <label for="gift-type" class="form-label">نوع الهدية</label>
-              <input
-                type="text"
-                class="form-control"
-                id="gift-type"
-                name="gift-type"
-                value="عطر نسائي"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="message" class="form-label">الرسالة مع الهدية</label>
-
-              <textarea
-                name="message"
-                class="form-control"
-                id="message"
-                readonly
-              >
-              
-لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع
-            </textarea
-              >
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-accept-date" class="form-label"
-                >تاريخ قبول الهدية</label
-              >
-              <input
-                type="date"
-                class="form-control"
-                id="gift-accept-date"
-                name="gift-accept-date"
-                value="2018-07-22"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-number" class="form-label"
-                >رقم المفتاح (رقم المنتج)</label
-              >
-              <input
-                type="number"
-                class="form-control"
-                id="gift-number"
-                name="gift-number"
-                value="50"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="love-status" class="form-label">حالة الحب</label>
-
-              <select
-                class="form-select result-input"
-                id="love-status"
-                name="love-status"
-                readonly
-              >
-                <option value="" disabled>اختر حالة الحب</option>
-                <option value="1" selected>العشق</option>
-                <option value="1">العشق</option>
-                <option value="1">العشق</option>
-              </select>
-            </div>
-          </form>
-
-          <div class="image-wrap absolute-image contain">
-            <img src="content/imgs/gift-order.png" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Success Modal -->
-      <div
-        class="modal item-modal action-modal fade"
-        id="actionModal"
-        tabindex="-1"
-        aria-labelledby="actionModalLabel"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
-        >
-          <div class="modal-content">
-            <div class="modal-body pt-3">
-              <div class="image-wrap contain icon">
-                <img src="content/icons/success.svg" />
-              </div>
-
-              <h5 class="action-title h6">تم تأكيد الدفع بنجاح</h5>
-
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#noticeModal"
-              >
-                متابعة
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Notice Modal -->
-      <div
-        class="modal item-modal notice-modal fade"
-        id="noticeModal"
-        tabindex="-1"
-        aria-labelledby="noticeModalLabel"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
-        >
-          <div class="modal-content">
-            <div class="modal-body pt-3">
-              <dotlottie-player
-                src="content/json/24.json"
-                background="transparent"
-                speed="1"
-                class="animated-icon"
-                loop
-                autoplay
-              ></dotlottie-player>
-
-              <h5 class="notice-title h6">تم تأكيد الدفع بنجاح</h5>
-
-              <div class="buttons">
-                <a href="index.html" class="btn btn-primary">
-                  الرجوع للرئيسية
-                </a>
-                <a href="sent-orders.html" class="btn btn-secondary">
-                  متابعة الطلب
-                </a>
-              </div>
-            </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

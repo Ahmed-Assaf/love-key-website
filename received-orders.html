@@ -247,182 +247,146 @@
 
     <span class="nav-overlay"></span>
 
-    <section class="order-gift-page">
+    <section class="orders-type-page received">
       <div class="container">
-        <div class="form-wrap">
-          <div class="form-heading">
-            <h2 class="title ghad-font h5">تفاصيل الهدية</h2>
+        <h3 class="title main-color ghad-font text-center mb-4">
+          الطلبات المُرسَلة
+        </h3>
+
+        <div class="row orders-list">
+          <div
+            class="col-md-3 col-4 nav flex-column gap-3 nav-pills pt-4 p-0 ps-2"
+            id="v-pills-tab"
+            role="tablist"
+            aria-orientation="vertical"
+          >
+            <button
+              class="nav-link active"
+              id="v-pills-new-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-new"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-new"
+              aria-selected="true"
+            >
+              طلبات جديدة
+            </button>
+
+            <button
+              class="nav-link"
+              id="v-pills-current-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-current"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-current"
+              aria-selected="false"
+            >
+              طلبات حالية
+            </button>
+
+            <button
+              class="nav-link"
+              id="v-pills-finished-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#v-pills-finished"
+              type="button"
+              role="tab"
+              aria-controls="v-pills-finished"
+              aria-selected="false"
+            >
+              طلبات منتهية
+            </button>
           </div>
 
-          <form class="row g-3 needs-validation" novalidate>
-            <div class="form-group col-12">
-              <label for="name" class="form-label">اسم المقدمة إليه</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                value="مي محمود"
-                readonly
-              />
+          <div class="col-md-9 col-8 tab-content ps-0" id="v-pills-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="v-pills-new"
+              role="tabpanel"
+              aria-labelledby="v-pills-new-tab"
+              tabindex="0"
+            >
+              <ul class="list-wrap">
+                <li>
+                  <div class="gift-item-card">
+                    <div class="gift-icon image-wrap contain">
+                      <img src="content/icons/gift-icon.svg" alt="gift-icon" />
+                    </div>
+
+                    <div class="content">
+                      <h2 class="title h5 mb-3">
+                        لقد أرسلت هدية جديدة إلى مي محمود
+                      </h2>
+                      <small class="text date mb-0">6 ديسمبر 2023</small>
+                    </div>
+
+                    <a href="order-details.html" class="link">تفاصيل الطلب</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="gift-item-card">
+                    <div class="gift-icon image-wrap contain">
+                      <img
+                        src="content/icons/pending-clock.svg"
+                        alt="gift-icon"
+                      />
+                    </div>
+
+                    <div class="content">
+                      <h2 class="title h5 mb-3">
+                        لقد أرسلت هدية جديدة إلى مي محمود
+                      </h2>
+                      <small class="text date mb-0">6 ديسمبر 2023</small>
+                    </div>
+
+                    <a href="order-details.html" class="link">تفاصيل الطلب</a>
+                  </div>
+                </li>
+              </ul>
             </div>
 
-            <div class="form-group col-12">
-              <label for="gift-date" class="form-label">موعد الهدية</label>
-              <input
-                type="date"
-                class="form-control"
-                id="gift-date"
-                name="gift-date"
-                value="2018-07-22"
-                readonly
-              />
+            <div
+              class="tab-pane fade"
+              id="v-pills-current"
+              role="tabpanel"
+              aria-labelledby="v-pills-current-tab"
+              tabindex="0"
+            >
+              ...
             </div>
 
-            <div class="form-group col-12">
-              <label for="gift-type" class="form-label">نوع الهدية</label>
-              <input
-                type="text"
-                class="form-control"
-                id="gift-type"
-                name="gift-type"
-                value="عطر نسائي"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="message" class="form-label">الرسالة مع الهدية</label>
-
-              <textarea
-                name="message"
-                class="form-control"
-                id="message"
-                readonly
-              >
-              
-لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع
-            </textarea
-              >
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-accept-date" class="form-label"
-                >تاريخ قبول الهدية</label
-              >
-              <input
-                type="date"
-                class="form-control"
-                id="gift-accept-date"
-                name="gift-accept-date"
-                value="2018-07-22"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-number" class="form-label"
-                >رقم المفتاح (رقم المنتج)</label
-              >
-              <input
-                type="number"
-                class="form-control"
-                id="gift-number"
-                name="gift-number"
-                value="50"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="love-status" class="form-label">حالة الحب</label>
-
-              <select
-                class="form-select result-input"
-                id="love-status"
-                name="love-status"
-                readonly
-              >
-                <option value="" disabled>اختر حالة الحب</option>
-                <option value="1" selected>العشق</option>
-                <option value="1">العشق</option>
-                <option value="1">العشق</option>
-              </select>
-            </div>
-          </form>
-
-          <div class="image-wrap absolute-image contain">
-            <img src="content/imgs/gift-order.png" />
-          </div>
-        </div>
-      </div>
-
-      <!-- Success Modal -->
-      <div
-        class="modal item-modal action-modal fade"
-        id="actionModal"
-        tabindex="-1"
-        aria-labelledby="actionModalLabel"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
-        >
-          <div class="modal-content">
-            <div class="modal-body pt-3">
-              <div class="image-wrap contain icon">
-                <img src="content/icons/success.svg" />
-              </div>
-
-              <h5 class="action-title h6">تم تأكيد الدفع بنجاح</h5>
-
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#noticeModal"
-              >
-                متابعة
-              </button>
+            <div
+              class="tab-pane fade"
+              id="v-pills-finished"
+              role="tabpanel"
+              aria-labelledby="v-pills-finished-tab"
+              tabindex="0"
+            >
+              ...
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- Notice Modal -->
-      <div
-        class="modal item-modal notice-modal fade"
-        id="noticeModal"
-        tabindex="-1"
-        aria-labelledby="noticeModalLabel"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
-        >
-          <div class="modal-content">
-            <div class="modal-body pt-3">
-              <dotlottie-player
-                src="content/json/24.json"
-                background="transparent"
-                speed="1"
-                class="animated-icon"
-                loop
-                autoplay
-              ></dotlottie-player>
-
-              <h5 class="notice-title h6">تم تأكيد الدفع بنجاح</h5>
-
-              <div class="buttons">
-                <a href="index.html" class="btn btn-primary">
-                  الرجوع للرئيسية
+        <div class="pagination-wrap pt-5">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
                 </a>
-                <a href="sent-orders.html" class="btn btn-secondary">
-                  متابعة الطلب
+              </li>
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item disabled">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
                 </a>
-              </div>
-            </div>
-          </div>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </section>

@@ -33,6 +33,7 @@
 @import "components/home-gifts";
 @import "components/home-about";
 @import "components/otp";
+@import "components/product-card";
 
 // =========================================PAGES================================================
 @import "pages/categories";
@@ -43,6 +44,9 @@
 @import "pages/auth";
 @import "pages/wallet";
 @import "pages/gifts-history";
+@import "pages/orders";
+@import "pages/order-type";
+@import "pages/order-details";
 
 // ======================================ltr================================
 @import "ltr";

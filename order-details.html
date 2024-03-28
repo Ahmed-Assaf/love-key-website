@@ -247,122 +247,354 @@
 
     <span class="nav-overlay"></span>
 
-    <section class="order-gift-page">
-      <div class="container">
-        <div class="form-wrap">
-          <div class="form-heading">
-            <h2 class="title ghad-font h5">تفاصيل الهدية</h2>
-          </div>
-
-          <form class="row g-3 needs-validation" novalidate>
-            <div class="form-group col-12">
-              <label for="name" class="form-label">اسم المقدمة إليه</label>
-              <input
-                type="text"
-                class="form-control"
-                id="name"
-                name="name"
-                value="مي محمود"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-date" class="form-label">موعد الهدية</label>
-              <input
-                type="date"
-                class="form-control"
-                id="gift-date"
-                name="gift-date"
-                value="2018-07-22"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-type" class="form-label">نوع الهدية</label>
-              <input
-                type="text"
-                class="form-control"
-                id="gift-type"
-                name="gift-type"
-                value="عطر نسائي"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="message" class="form-label">الرسالة مع الهدية</label>
-
-              <textarea
-                name="message"
-                class="form-control"
-                id="message"
-                readonly
-              >
-              
-لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور طريقه وضع
-            </textarea
-              >
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-accept-date" class="form-label"
-                >تاريخ قبول الهدية</label
-              >
-              <input
-                type="date"
-                class="form-control"
-                id="gift-accept-date"
-                name="gift-accept-date"
-                value="2018-07-22"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="gift-number" class="form-label"
-                >رقم المفتاح (رقم المنتج)</label
-              >
-              <input
-                type="number"
-                class="form-control"
-                id="gift-number"
-                name="gift-number"
-                value="50"
-                readonly
-              />
-            </div>
-
-            <div class="form-group col-12">
-              <label for="love-status" class="form-label">حالة الحب</label>
-
-              <select
-                class="form-select result-input"
-                id="love-status"
-                name="love-status"
-                readonly
-              >
-                <option value="" disabled>اختر حالة الحب</option>
-                <option value="1" selected>العشق</option>
-                <option value="1">العشق</option>
-                <option value="1">العشق</option>
-              </select>
-            </div>
-          </form>
-
-          <div class="image-wrap absolute-image contain">
-            <img src="content/imgs/gift-order.png" />
-          </div>
+    <main class="order-details">
+      <section class="steps">
+        <div class="container">
+          <ul class="steps-wrap">
+            <li class="step">
+              <span class="dot"></span>
+              <h6 class="title ghad-font">في انتظار <br />قبول الهدية</h6>
+            </li>
+            <li class="step">
+              <span class="dot"></span>
+              <h6 class="title ghad-font">جاري التجهيز</h6>
+            </li>
+            <li class="step">
+              <span class="dot"></span>
+              <h6 class="title ghad-font">في الطريق</h6>
+            </li>
+            <li class="step">
+              <span class="dot"></span>
+              <h6 class="title ghad-font">مكتمل</h6>
+            </li>
+          </ul>
         </div>
+      </section>
+
+      <div class="container">
+        <section class="details-wrap">
+          <div class="order-head">
+            <h3 class="h4 title text-center main-color mb-3">تفاصيل الطلب</h3>
+
+            <button
+              class="btn btn-primary mx-auto"
+              data-bs-toggle="modal"
+              data-bs-target="#cancelModal"
+            >
+              إلغاء الطلب
+            </button>
+          </div>
+
+          <div class="order-slog">
+            <h4 class="slog-title">بيانات المُقدم إليه</h4>
+
+            <div class="slog-content">
+              <ul class="row row-gap-30">
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="name"
+                      >اسم المُقدم إليه</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="name"
+                        class="form-control"
+                        value="مي محمود"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="phone"
+                      >رقم جوال المُقدم إليه</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <div class="addon-input">
+                        <input
+                          type="text"
+                          id="phone"
+                          class="form-control"
+                          value="123456789"
+                          disabled
+                        />
+
+                        <div class="addon">
+                          <div class="image-wrap contain">
+                            <img
+                              src="content/icons/saudi-flag.svg"
+                              alt="country-flag"
+                            />
+                          </div>
+                          +966
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="country"
+                      >دولة المُقدم إليه</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="country"
+                        class="form-control"
+                        value="السعودية"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="country"
+                      >تصنيف المُقدم إليه</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="country"
+                        class="form-control"
+                        value="صديق"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="order-slog">
+            <h4 class="slog-title">بيانات الطلب</h4>
+
+            <div class="slog-content">
+              <ul class="row row-gap-30">
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="order_number"
+                      >رقم الطلب</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="order_number"
+                        class="form-control"
+                        value="123"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="date"
+                      >تاريخ الطلب</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="date"
+                        class="form-control"
+                        value="15 ديسمبر 2023"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="delivery_time"
+                      >وقت التوصيل</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="delivery_time"
+                        class="form-control"
+                        value="3 ساعات"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="vat"
+                      >قيمة الضريبة</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="vat"
+                        class="form-control"
+                        value="50 ريال"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="product_price"
+                      >قيمة المنتج</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="product_price"
+                        class="form-control"
+                        value="5000 ريال"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="payment"
+                      >طريقة الدفع</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="payment"
+                        class="form-control"
+                        value="إلكتروني"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="delivery_price"
+                      >قيمة التوصيل</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="delivery_price"
+                        class="form-control"
+                        value="50 ريال"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+
+                <li class="col-lg-6">
+                  <div class="row">
+                    <label
+                      class="col-md-4 mb-0 d-flex align-items-center"
+                      for="total"
+                      >إجمالي الطلب</label
+                    >
+
+                    <div class="form-group col-md-8">
+                      <input
+                        type="text"
+                        id="total"
+                        class="form-control"
+                        value="6000 ريال"
+                        disabled
+                      />
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="order-slog">
+            <h4 class="slog-title">بيانات المنتج</h4>
+
+            <div class="slog-content">
+              <ul class="prods">
+                <li class="product-card">
+                  <div class="image image-wrap">
+                    <img src="content/imgs/perfume.png" />
+                  </div>
+
+                  <div class="content">
+                    <h5 class="title">اسم المنتج</h5>
+
+                    <div class="price-id">
+                      <h6 class="price h5">السعر <span>500 ريال</span></h6>
+                      <h6 class="id h5">
+                        رقم المنتج <span class="h6">50</span>
+                      </h6>
+                    </div>
+
+                    <p class="text">
+                      لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض على
+                      العميل ليتصور طريقه لوريم ايبسوم هو نموذج افتراضي يوضع في
+                      التصاميم لتعرض على العميل ليتصور طريقه لوريم ايبسوم هو
+                      نموذج افتراضي يوضع في التصاميم لتعرض على العميل ليتصور
+                      طريقه لوريم ايبسوم هو نموذج افتراضي يوضع في التصاميم لتعرض
+                      على العميل ليتصور طريقه
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
       </div>
 
-      <!-- Success Modal -->
+      <!-- cancel Modal -->
       <div
         class="modal item-modal action-modal fade"
-        id="actionModal"
+        id="cancelModal"
         tabindex="-1"
-        aria-labelledby="actionModalLabel"
+        aria-labelledby="cancelModalLabel"
         aria-hidden="true"
       >
         <div
@@ -371,61 +603,22 @@
           <div class="modal-content">
             <div class="modal-body pt-3">
               <div class="image-wrap contain icon">
-                <img src="content/icons/success.svg" />
+                <img src="content/icons/question.svg" />
               </div>
 
-              <h5 class="action-title h6">تم تأكيد الدفع بنجاح</h5>
-
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#noticeModal"
-              >
-                متابعة
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Notice Modal -->
-      <div
-        class="modal item-modal notice-modal fade"
-        id="noticeModal"
-        tabindex="-1"
-        aria-labelledby="noticeModalLabel"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
-        >
-          <div class="modal-content">
-            <div class="modal-body pt-3">
-              <dotlottie-player
-                src="content/json/24.json"
-                background="transparent"
-                speed="1"
-                class="animated-icon"
-                loop
-                autoplay
-              ></dotlottie-player>
-
-              <h5 class="notice-title h6">تم تأكيد الدفع بنجاح</h5>
+              <h5 class="action-title h6">هل تود حقًا إلغاء الطلب؟</h5>
 
               <div class="buttons">
-                <a href="index.html" class="btn btn-primary">
-                  الرجوع للرئيسية
-                </a>
-                <a href="sent-orders.html" class="btn btn-secondary">
-                  متابعة الطلب
-                </a>
+                <button class="btn btn-primary sm">إلغاء الطلب</button>
+                <button class="btn btn-secondary sm" data-bs-dismiss="modal">
+                  رجوع
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </main>
 
     <!-- footer -->
     <footer class="footer">

@@ -1,0 +1,50 @@
+.orders-page {
+  .order-type-card {
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 1/0.98;
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px 10px;
+    color: $mainColor;
+
+    .bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      transition: $transition3;
+    }
+
+    .title {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:hover {
+      .bg {
+        transform: scale(1.1);
+      }
+    }
+
+    &.soon {
+      &::before {
+        @extend %pseudo-ele;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 2;
+      }
+
+      &::after {
+        @extend %pseudo-ele;
+        inset: 0;
+        background: {
+          image: url("../icons/soon.svg");
+          position: center;
+          repeat: no-repeat;
+          size: 23%;
+        }
+        z-index: 3;
+      }
+    }
+  }
+}

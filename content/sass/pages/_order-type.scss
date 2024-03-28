@@ -1,0 +1,100 @@
+.orders-type-page {
+  .orders-list {
+    .nav-pills {
+      align-items: flex-end;
+
+      .nav-link {
+        opacity: 0.5;
+        transition: $transition3;
+        transform: scale(0.9);
+        transform-origin: left;
+        font-family: $AlghadFont;
+        padding: 12px 25px;
+        color: $mainColor !important;
+        text-align: center;
+        box-shadow: 0 1.44px 3.44px rgba($color: #000000, $alpha: 0.25);
+        border-radius: 0;
+        border-start-start-radius: 6px;
+        border-end-start-radius: 6px;
+
+        &.active {
+          opacity: 1;
+          transform: scale(1.1);
+        }
+      }
+    }
+
+    .tab-pane {
+      .list-wrap {
+        padding-block: 10px;
+        border-radius: 10px;
+
+        li:not(:last-of-type) {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+
+        .gift-item-card {
+          @include displayFlex($gap: 15px, $wrap: wrap);
+          padding: 12px 30px;
+
+          .gift-icon {
+            width: 55px;
+            aspect-ratio: 1;
+            flex-shrink: 0;
+          }
+
+          .content {
+            flex: 1;
+
+            .text {
+              line-height: initial;
+            }
+          }
+
+          .link {
+            text-align: center;
+            color: $mainColor;
+
+            .icon {
+              width: 40px;
+              margin-inline: auto;
+              margin-block-end: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.sent {
+    .orders-list {
+      .nav-pills {
+        .nav-link {
+          background-color: rgba($color: #f9eeb6, $alpha: 0.5);
+        }
+      }
+
+      .tab-pane {
+        .list-wrap {
+          background-color: rgba($color: #f9eeb6, $alpha: 0.5);
+        }
+      }
+    }
+  }
+
+  &.received {
+    .orders-list {
+      .nav-pills {
+        .nav-link {
+          background-color: rgba($lightMainColor, $alpha: 0.5);
+        }
+      }
+
+      .tab-pane {
+        .list-wrap {
+          background-color: rgba($lightMainColor, $alpha: 0.5);
+        }
+      }
+    }
+  }
+}
