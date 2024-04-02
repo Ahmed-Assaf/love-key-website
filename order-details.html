@@ -248,7 +248,8 @@
     <span class="nav-overlay"></span>
 
     <main class="order-details">
-      <section class="steps">
+      <!-- put sent, received or shop class according to your case -->
+      <section class="steps sent">
         <div class="container">
           <ul class="steps-wrap">
             <li class="step">
@@ -259,7 +260,7 @@
               <span class="dot"></span>
               <h6 class="title ghad-font">جاري التجهيز</h6>
             </li>
-            <li class="step">
+            <li class="step active">
               <span class="dot"></span>
               <h6 class="title ghad-font">في الطريق</h6>
             </li>
@@ -273,6 +274,12 @@
 
       <div class="container">
         <section class="details-wrap">
+          <!-- <div class="order-action"> // uncomment in case of received order
+            <h5 class="h4 m-0">هل تريد قبول الطلب ؟</h5>
+            <a href="add-address.html" class="btn btn-green">قبول</a>
+            <button class="btn btn-red">رفض</button>
+          </div> -->
+
           <div class="order-head">
             <h3 class="h4 title text-center main-color mb-3">تفاصيل الطلب</h3>
 
@@ -618,6 +625,37 @@
           </div>
         </div>
       </div>
+
+      <!-- Success Modal -->
+      <div
+        class="modal item-modal action-modal fade"
+        id="deliveringModal"
+        tabindex="-1"
+        aria-labelledby="deliveringModalLabel"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
+        >
+          <div class="modal-content">
+            <div class="modal-body pt-3">
+              <div class="image-wrap contain icon">
+                <img src="content/icons/delivery-man.svg" />
+              </div>
+
+              <h5 class="action-title h6">
+                تم توصيل الهدية إلى شركة الشحن والطلب الان في الطريق
+              </h5>
+
+              <div class="buttons">
+                <button class="btn btn-primary sm" data-bs-dismiss="modal">
+                  متابعة الطلب
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <!-- footer -->
@@ -691,7 +729,6 @@
             </small>
           </div>
         </div>
-        <!-- <p>جميع الحقوق &copy; محفوظة لدى فجر السعيد</p> -->
       </div>
     </footer>
 
@@ -719,32 +756,7 @@
 
     <script>
       $(() => {
-        // form submit
-        // form validation
-        (() => {
-          "use strict";
-          const forms = document.querySelectorAll(".needs-validation");
-
-          Array.from(forms).forEach((form) => {
-            form.addEventListener(
-              "submit",
-              (event) => {
-                event.preventDefault();
-                if (!form.checkValidity()) {
-                  console.log("form submit");
-                } else {
-                  // ============ run your submit logic here
-                  $("#actionModal").modal("show");
-                }
-
-                $("#paymentModal").modal("hide");
-
-                form.classList.add("was-validated");
-              },
-              false
-            );
-          });
-        })();
+        $("#deliveringModal").modal("show");
       });
     </script>
   </body>

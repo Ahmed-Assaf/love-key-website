@@ -97,4 +97,20 @@
       }
     }
   }
+
+  &.shop {
+    .orders-list {
+      .nav-pills {
+        .nav-link {
+          background-color: rgba($color: #c8e7f7, $alpha: 0.5);
+        }
+      }
+
+      .tab-pane {
+        .list-wrap {
+          background-color: rgba($color: #c8e7f7, $alpha: 0.5);
+        }
+      }
+    }
+  }
 }

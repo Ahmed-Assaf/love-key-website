@@ -250,7 +250,7 @@
     <section class="orders-type-page received">
       <div class="container">
         <h3 class="title main-color ghad-font text-center mb-4">
-          الطلبات المُرسَلة
+          الطلبات المُقدَمة إليك
         </h3>
 
         <div class="row orders-list">
@@ -391,6 +391,44 @@
       </div>
     </section>
 
+    <!-- Notice Modal -->
+    <div
+      class="modal item-modal notice-modal fade"
+      id="noticeModal"
+      tabindex="-1"
+      aria-labelledby="noticeModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-sm modal-dialog-centered modal-dialog-scrollable"
+      >
+        <div class="modal-content">
+          <div class="modal-body pt-3">
+            <dotlottie-player
+              src="content/json/24.json"
+              background="transparent"
+              speed="1"
+              class="animated-icon"
+              loop
+              autoplay
+            ></dotlottie-player>
+
+            <h5 class="notice-title h6">
+              في حالة عدم قبول الهدية المرسلة <br />
+              سيتم إلغاءها تلقائيًا بعد
+              <span class="main-color h4">24 ساعة</span>
+            </h5>
+
+            <div class="buttons">
+              <button data-bs-dismiss="modal" class="btn btn-primary">
+                متابعة الطلبات
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- footer -->
     <footer class="footer">
       <div class="container">
@@ -462,7 +500,6 @@
             </small>
           </div>
         </div>
-        <!-- <p>جميع الحقوق &copy; محفوظة لدى فجر السعيد</p> -->
       </div>
     </footer>
 
@@ -490,32 +527,7 @@
 
     <script>
       $(() => {
-        // form submit
-        // form validation
-        (() => {
-          "use strict";
-          const forms = document.querySelectorAll(".needs-validation");
-
-          Array.from(forms).forEach((form) => {
-            form.addEventListener(
-              "submit",
-              (event) => {
-                event.preventDefault();
-                if (!form.checkValidity()) {
-                  console.log("form submit");
-                } else {
-                  // ============ run your submit logic here
-                  $("#actionModal").modal("show");
-                }
-
-                $("#paymentModal").modal("hide");
-
-                form.classList.add("was-validated");
-              },
-              false
-            );
-          });
-        })();
+        $("#noticeModal").modal("show");
       });
     </script>
   </body>

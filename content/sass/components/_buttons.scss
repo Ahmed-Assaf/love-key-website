@@ -1,3 +1,15 @@
+%btn {
+  border: none;
+  box-shadow: none;
+  padding: 14px 30px;
+  text-align: center;
+  @include displayFlex($justify: center, $gap: 10px);
+  width: fit-content;
+  min-width: 260px;
+  max-width: inherit;
+  font-family: $AlghadFont;
+}
+
 // MAIN BUTTON OF WEBSITE
 .main-link {
   width: fit-content;
@@ -24,15 +36,7 @@
 .btn-primary {
   color: $whiteText;
   background-color: $mainColor;
-  border: none;
-  box-shadow: none;
-  padding: 14px 30px;
-  text-align: center;
-  @include displayFlex($justify: center, $gap: 10px);
-  width: fit-content;
-  min-width: 260px;
-  max-width: inherit;
-  font-family: $AlghadFont;
+  @extend %btn;
 
   &:hover,
   &:focus,
@@ -44,15 +48,7 @@
 .btn-secondary {
   color: $whiteText;
   background-color: rgba($mainColor, 0.5);
-  border: none;
-  box-shadow: none;
-  padding: 14px 30px;
-  text-align: center;
-  @include displayFlex($justify: center, $gap: 10px);
-  width: fit-content;
-  min-width: 260px;
-  max-width: inherit;
-  font-family: $AlghadFont;
+  @extend %btn;
 
   &:hover,
   &:focus,
@@ -64,15 +60,10 @@
 .btn-gray {
   color: $mainColor;
   background-color: $lightGrayColor;
-  border: none;
-  box-shadow: none;
+  @extend %btn;
   padding: 10px 20px;
-  text-align: center;
-  @include displayFlex($justify: flex-start, $gap: 10px);
-  width: fit-content;
+  justify-content: flex-start;
   min-width: 30%;
-  max-width: inherit;
-  font-family: $AlghadFont;
   font-size: 1.2rem;
 
   &:hover,
@@ -83,6 +74,30 @@
 
   .icon {
     height: 40px;
+  }
+}
+
+.btn-green {
+  background-color: rgba($color: #73af00, $alpha: 0.4);
+  @extend %btn;
+  min-width: 150px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($color: #73af00, $alpha: 0.5) !important;
+  }
+}
+
+.btn-red {
+  background-color: rgba($color: #eb0000, $alpha: 0.4);
+  @extend %btn;
+  min-width: 150px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($color: #eb0000, $alpha: 0.5) !important;
   }
 }
 

@@ -883,6 +883,36 @@ section {
   font-size: 12px;
 }
 
+.btn-red, .btn-green, .btn-gray, .btn-secondary, .btn-primary {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 14px 30px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  gap: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 260px;
+  max-width: inherit;
+  font-family: "AlGhadTV";
+}
+
 .main-link {
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -939,33 +969,6 @@ section {
 .btn-primary {
   color: #fff;
   background-color: #511b4b;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 14px 30px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  gap: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-width: 260px;
-  max-width: inherit;
-  font-family: "AlGhadTV";
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   background-color: rgba(81, 27, 75, 0.95) !important;
@@ -974,33 +977,6 @@ section {
 .btn-secondary {
   color: #fff;
   background-color: rgba(81, 27, 75, 0.5);
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  padding: 14px 30px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  gap: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  min-width: 260px;
-  max-width: inherit;
-  font-family: "AlGhadTV";
 }
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   background-color: rgba(81, 27, 75, 0.45) !important;
@@ -1009,33 +985,11 @@ section {
 .btn-gray {
   color: #511b4b;
   background-color: #f5f5f5;
-  border: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
   padding: 10px 20px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  gap: 10px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   min-width: 30%;
-  max-width: inherit;
-  font-family: "AlGhadTV";
   font-size: 1.2rem;
 }
 .btn-gray:hover, .btn-gray:focus, .btn-gray:active {
@@ -1043,6 +997,22 @@ section {
 }
 .btn-gray .icon {
   height: 40px;
+}
+
+.btn-green {
+  background-color: rgba(115, 175, 0, 0.4);
+  min-width: 150px;
+}
+.btn-green:hover, .btn-green:focus, .btn-green:active {
+  background-color: rgba(115, 175, 0, 0.5) !important;
+}
+
+.btn-red {
+  background-color: rgba(235, 0, 0, 0.4);
+  min-width: 150px;
+}
+.btn-red:hover, .btn-red:focus, .btn-red:active {
+  background-color: rgba(235, 0, 0, 0.5) !important;
 }
 
 .btn.sm {
@@ -2705,9 +2675,21 @@ form .wrong-way a {
 .orders-type-page.received .orders-list .tab-pane .list-wrap {
   background-color: rgba(224, 199, 221, 0.5);
 }
+.orders-type-page.shop .orders-list .nav-pills .nav-link {
+  background-color: rgba(200, 231, 247, 0.5);
+}
+.orders-type-page.shop .orders-list .tab-pane .list-wrap {
+  background-color: rgba(200, 231, 247, 0.5);
+}
 
-.order-details .steps {
+.order-details .steps.sent {
   background-color: rgba(249, 238, 182, 0.3);
+}
+.order-details .steps.received {
+  background-color: rgba(224, 199, 221, 0.3);
+}
+.order-details .steps.shop {
+  background-color: rgba(200, 231, 247, 0.3);
 }
 .order-details .steps .steps-wrap {
   display: -webkit-box;
@@ -2743,9 +2725,12 @@ form .wrong-way a {
   aspect-ratio: 1;
   background-color: #fff;
   border: 2px solid #511b4b;
-  outline: 10px solid #511b4b;
+  outline: 10px solid transparent;
   margin: 0 auto 22px;
   border-radius: 50%;
+}
+.order-details .steps .steps-wrap .step:has(~ .active) .dot, .order-details .steps .steps-wrap .step.active .dot {
+  outline-color: #511b4b;
 }
 .order-details .steps .steps-wrap::after {
   top: 8px;
@@ -2761,6 +2746,25 @@ form .wrong-way a {
   border-radius: 15px;
   margin-block: 50px;
   padding: 0;
+}
+.order-details .details-wrap .order-action {
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
 }
 .order-details .details-wrap .order-head {
   padding: 40px 30px;
@@ -2972,6 +2976,20 @@ form .wrong-way a {
   }
   .home-about .slogan-s {
     padding: 0;
+  }
+  .product-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .product-card .content {
+    text-align: center;
+  }
+  .product-card .content .price-id {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (max-width: 576px) {

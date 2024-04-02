@@ -1,6 +1,16 @@
 .order-details {
   .steps {
-    background-color: rgba($color: #f9eeb6, $alpha: 0.3);
+    &.sent {
+      background-color: rgba($color: #f9eeb6, $alpha: 0.3);
+    }
+
+    &.received {
+      background-color: rgba($color: $lightMainColor, $alpha: 0.3);
+    }
+
+    &.shop {
+      background-color: rgba($color: #c8e7f7, $alpha: 0.3);
+    }
 
     .steps-wrap {
       @include displayFlex($align: flex-start, $justify: center);
@@ -18,9 +28,15 @@
           aspect-ratio: 1;
           background-color: $whiteText;
           border: 2px solid $mainColor;
-          outline: 10px solid $mainColor;
+          outline: 10px solid transparent;
           margin: 0 auto 22px;
           border-radius: 50%;
+        }
+        &:has(~ .active),
+        &.active {
+          .dot {
+            outline-color: $mainColor;
+          }
         }
       }
 
@@ -41,6 +57,11 @@
     border-radius: 15px;
     margin-block: 50px;
     padding: 0;
+
+    .order-action {
+      padding: 40px 30px;
+      @include displayFlex($justify: center, $wrap: wrap, $gap: 20px);
+    }
 
     .order-head {
       padding: 40px 30px;
